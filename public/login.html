@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Papelería ABC</title>
+    <link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body class="login-page">
+
+    <main class="login-container">
+        <section class="login-box">
+            <div class="brand">
+                <div class="brand-icon">ABC</div>
+                <div>
+                    <h1>Papelería ABC</h1>
+                    <p>Sistema de inventario</p>
+                </div>
+            </div>
+
+            <h2>Iniciar sesión</h2>
+
+            <form id="loginForm">
+                <label for="usuario">Usuario</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Ingrese su usuario"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">Contraseña</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Ingrese su contraseña"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" class="btn-primary">
+                    Iniciar sesión
+                </button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+    </main>
+
+    <script src="/static/login.js"></script>
+</body>
+</html>

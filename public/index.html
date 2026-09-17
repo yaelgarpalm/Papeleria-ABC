@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Papelería ABC</title>
+    <link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>Papelería ABC</h1>
+            <span>Sistema de inventario</span>
+        </div>
+
+        <div class="session-area">
+            <span id="usuarioActual">Usuario</span>
+            <button id="btnLogout" class="btn-secondary">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="card">
+            <div class="section-title">
+                <div>
+                    <h2 id="tituloFormulario">Agregar producto</h2>
+                    <p>Registra y administra los productos del inventario.</p>
+                </div>
+            </div>
+
+            <form id="productoForm" class="product-form">
+
+                <input type="hidden" id="productoId">
+
+                <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="field">
+                    <label for="categoria">Categoría</label>
+                    <input type="text" id="categoria" required>
+                </div>
+
+                <div class="field">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" min="0" step="0.01" required>
+                </div>
+
+                <div class="field">
+                    <label for="stock">Stock</label>
+                    <input type="number" id="stock" min="0" step="1" required>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary" id="btnGuardar">
+                        Guardar producto
+                    </button>
+
+                    <button type="button" class="btn-secondary hidden" id="btnCancelar">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+
+            <p id="mensajeProducto" class="mensaje"></p>
+        </section>
+
+        <section class="card">
+
+            <div class="section-title">
+                <div>
+                    <h2>Inventario</h2>
+                    <p>Productos registrados en la base de datos.</p>
+                </div>
+
+                <button id="btnActualizar" class="btn-secondary">
+                    Actualizar
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaProductos"></tbody>
+                </table>
+            </div>
+
+            <p id="sinProductos" class="empty-message hidden">
+                No hay productos registrados.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
