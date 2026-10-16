@@ -1,0 +1,4 @@
+# Ultralytics trae YOLO11-pose, PyTorch, OpenCV y NumPy
+ultralytics>=8.3.0
+requests>=2.28
+# Solo para correr las pruebas: pip install pytest

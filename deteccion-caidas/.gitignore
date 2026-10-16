@@ -1,0 +1,12 @@
+# Datos de WiFi
+firmware/xiao_camara_caidas/config.h
+
+# Python
+__pycache__/
+.pytest_cache/
+venv/
+.venv/
+
+# Pesos del modelo (se descargan solos) y fotos de las caídas
+*.pt
+servidor/capturas/
